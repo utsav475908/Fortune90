@@ -44,22 +44,22 @@
     [super viewDidLoad];
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(onNotification:) name:nil object:nil];
     self.myTextView = [self makeMyTextView];
-   
-    self.myTextView.text = [self doThisNow];
-    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(doThisNow) userInfo:nil repeats:YES];
+    int random = arc4random() % 5;
     
-    self.myTextView.alpha = 0.3;
-    [self.view addSubview:self.myTextView];
+    [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(doThisNow) userInfo:nil repeats:YES];
+    self.myTextView.text = @"this is something great this is something great this is something great this is something great this is something great this is something great";
+    self.myTextView.alpha = 1.0;
+    //[self.view addSubview:self.myTextView];
 }
 
--(NSString *)doThisNow{
+-(NSArray *)doThisNow{
     
     NSArray *list = [self.notificationName mutableCopy];
-    for (NSString *something in list) {
-        self.myTextView.text = something;
-    }
-    return self.myTextView.text;
-    
+//    for (NSString *something in list) {
+//        self.myTextView.text = something;
+//    }
+//    return self.myTextView.text;
+    return list;
 }
 
 -(void)onNotification:(NSNotification *)notification{
@@ -70,10 +70,10 @@
 }
 
 -(UITextView *)makeMyTextView{
-    UITextView *textV = [[UITextView alloc]initWithFrame:CGRectMake(20, 20, 400, 400)];
+    UITextView *textV = [[UITextView alloc]initWithFrame:CGRectMake(20, 20, 200, 200)];
     [textV.layer setBorderColor:[[[UIColor grayColor]colorWithAlphaComponent:0.5]CGColor]];
     [textV.layer setBorderWidth:2.0];
-    textV.layer.cornerRadius = 5;
+    textV.layer.cornerRadius = 100;
     textV.clipsToBounds = YES;
     return textV;
 }

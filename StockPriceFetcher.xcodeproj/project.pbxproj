@@ -37,6 +37,7 @@
 		D0D4F40915F4F8DE00EB7536 /* JCDHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCDHTTPConnection.h; sourceTree = "<group>"; };
 		D0D4F40A15F4F8DE00EB7536 /* JCDHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCDHTTPConnection.m; sourceTree = "<group>"; };
 		D0D4F41415F502AC00EB7536 /* SPFPriceFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPFPriceFetcher.h; sourceTree = "<group>"; };
+		D9D8E2FF1D0DAD27006E53A2 /* iOS7-notifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS7-notifications.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		D0D4F3EF15F4F7CA00EB7536 /* StockPriceFetcher */ = {
 			isa = PBXGroup;
 			children = (
+				D9D8E2FF1D0DAD27006E53A2 /* iOS7-notifications.h */,
 				D0D4F40915F4F8DE00EB7536 /* JCDHTTPConnection.h */,
 				D0D4F40A15F4F8DE00EB7536 /* JCDHTTPConnection.m */,
 				D0D4F3F815F4F7CA00EB7536 /* SPFAppDelegate.h */,
@@ -292,6 +294,7 @@
 				D0D4F40515F4F7CA00EB7536 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
